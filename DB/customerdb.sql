@@ -21,9 +21,12 @@ USE `customerdb` ;
 DROP TABLE IF EXISTS `customer` ;
 
 CREATE TABLE IF NOT EXISTS `customer` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(50) NOT NULL,
   `last_name` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(100) NULL,
+  `address` VARCHAR(250) NULL,
+  `phone` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -43,7 +46,17 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `customerdb`;
-INSERT INTO `customer` (`id`, `first_name`, `last_name`) VALUES (1, 'Douglas', 'Sigmon');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (1, 'Douglas', 'Sigmon', 'doug@gmail.com', '123 street', '123-987-432');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (2, 'Analaura', 'Cena', NULL, NULL, '234-333-4532');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (3, 'Marcelo', 'Johnson', NULL, NULL, '345-345-3322');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (4, 'Kody', 'Killabang', NULL, NULL, '456-776-6555');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (5, 'Paris', 'Ransom', NULL, NULL, '');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (6, 'Juan', 'Rueben', NULL, NULL, '');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (7, 'Alex', 'Rangel', NULL, NULL, '');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (8, 'Alondra', 'Alovera', NULL, NULL, '');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (9, 'Anelle', 'Antwhit', NULL, NULL, '');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (10, 'Laura', 'Lozano', NULL, NULL, '');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `address`, `phone`) VALUES (11, 'Meshell', 'Pumpernickle', NULL, NULL, '');
 
 COMMIT;
 

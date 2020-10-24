@@ -19,6 +19,46 @@ public class Customer {
 	@Column(name = "last_name")
 	private String lastName;
 
+	private String email;
+
+	private String address;
+
+	private String phone;
+
+	public Customer(int id, String firstName, String lastName, String email, String address, String phone) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.address = address;
+		this.phone = phone;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public String getLastName() {
 		return lastName;
 	}
@@ -31,10 +71,6 @@ public class Customer {
 		super();
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
-	}
 
 	public int getId() {
 		return id;
@@ -50,6 +86,12 @@ public class Customer {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", address=" + address + ", phoneNumber=" + phone + "]";
 	}
 
 }
