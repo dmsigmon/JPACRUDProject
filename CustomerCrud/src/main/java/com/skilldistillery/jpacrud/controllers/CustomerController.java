@@ -34,15 +34,8 @@ public class CustomerController {
 	public ModelAndView addCustomer(Customer customer, RedirectAttributes ra) {
 		
 		Customer tempCust = dao.createCustomer(customer);
-//		tempCust.setFirstName(firstName);
-//		tempCust.setLastName(lastName);
-//		tempCust.setAddress(address);
-//		tempCust.setAddress(email);
-//		tempCust.setPhone(phone);
-//		dao.createCustomer(tempCust);
 		ModelAndView mv = new ModelAndView();
 		ra.addFlashAttribute("customer", tempCust);
-//		mv.addObject("customer", tempCust);
 		mv.setViewName("redirect:customerAdded.do");
 		return mv;
 	}
@@ -53,5 +46,18 @@ public class CustomerController {
 		return mv;
 	}
 	
-
+	@RequestMapping(path="deleteCustomer.do", method = RequestMethod.GET)
+	public ModelAndView deleteCustomer(Integer id) {
+		dao.deleteCustomer(id);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("index");
+		return mv;
+	}
+	@RequestMapping(path="updateEmail.do", method = RequestMethod.POST)
+	public ModelAndView updateEmail(String email, String phone) {
+		dao.updateEmailByPhone(email, phone);;
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("customer/show");
+		return mv;
+	}
 }

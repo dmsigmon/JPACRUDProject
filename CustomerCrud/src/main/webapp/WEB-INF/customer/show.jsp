@@ -46,33 +46,12 @@
     No Customer found
     
     	<p>
-				<a href="index.do" class="btn btn-secondary" role="button">Back
+				<a href="/" class="btn btn-secondary" role="button">Back
 					to Home</a>
 			</p>
 		</c:otherwise>
 	</c:choose>
 	
-	public boolean destroy(int id) {
-		EntityManager em = emf.createEntityManager();
-		
-		Actor poorActor = em.find(Actor.class, id);
-		
-		em.getTransaction().begin();
-		em.remove(poorActor);
-		boolean actorWasDeleted = ! em.contains(poorActor);
-		
-		em.flush();
-		
-		em.getTransaction().commit();
-		
-		em.close();
-		
-		return actorWasDeleted;
-
-<!-- 	<form action="deleteCustomer.do" method="GET">
-		<input type="text" name="Customer" /> <br /> <br /> <input
-			type="submit" value="Submit" /> <br />
-	</form> -->
 
 
 </body>

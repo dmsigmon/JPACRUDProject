@@ -63,30 +63,26 @@ public class CustomerDAOJpaImpl implements CustomerDAO {
 	    return customer;
 	  }
 	
+
 	@Override
-	public boolean deleteCustomer(String phone) {
-		Customer cust = null;
-		String jpql = "SELECT c FROM Customer c WHERE c.phone = :phone";
-		try {
-			cust = em.createQuery(jpql, Customer.class)
-						.setParameter("phone", phone)
-						.getSingleResult();
-			em.getTransaction().begin();
-			em.remove(cust);
-		} catch (NoResultException e) {
-			e.printStackTrace();
-		} catch (NonUniqueResultException e) {
-			e.printStackTrace();
-		}
-		boolean actorWasDeleted = ! em.contains(cust);
-		
+	public void deleteCustomer(int id) {
+		String jpql = "DELETE FROM Customer c WHERE c.id = :id";
+		id = em.createQuery(jpql)
+				.setParameter("id", id)
+				.executeUpdate();
 		em.flush();
-		
-		em.getTransaction().commit();
-		
-		
-		return actorWasDeleted;
+		em.close();
 	}
+	public void updateEmailByPhone(String email, String phone) {
+		String jpql = "UPDATE Customer cust SET email = :email WHERE phone = :phone";
+		em.createQuery(jpql).setParameter("email", email)
+							.setParameter("phone", phone)
+							.executeUpdate();
+		// sync up:
+		em.flush();
+		em.close();
+	}
+
 
 	 
 	

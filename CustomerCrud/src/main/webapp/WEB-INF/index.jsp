@@ -23,20 +23,37 @@
       <br>
       
       <label for="lastName">Last Name:</label>
-      <input type="text" name="lastName" value="Fresh">
+      <input type="text" name="lastName" value="Dizzle">
       <br>
       <label for="email">Email:</label>
-      <input type="text" name = "email" value ="email">
+      <input type="text" name = "email" value ="DeeMail@fredFreddette.org">
       <br>
       <label for="address">Address:</label>
-      <input type="text" name = "address" value ="address">
+      <input type="text" name = "address" value ="Dark Side of the Moon">
       <br>
       <label for="phone">Email:</label>
-      <input type="text" name = "phone" value ="phone">
+      <input type="text" name = "phone" value ="222 NOT FOR YOU">
       <br>
       <input type="submit">
-      
-      
 </form>
+
+<h4>Delete Customer</h4>
+<form action="deleteCustomer.do" method="GET">
+Customer ID: <input type="text" name="id" /> <input type="submit"
+	value="Delete Customer" />
+</form>
+
+
+<h4>Update email by phone</h4>
+<form action="updateEmail.do" method = "POST">
+  <label for="phone">phone:</label>
+      <input type="text" name = "phone" value ="222 NOT FOR YOU">
+      <br>
+      <label for="email">Email:</label>
+      <input type="text" name = "email" value ="">
+      <br>
+      <input type="submit">
+</form>
+
 </body>
 </html>
