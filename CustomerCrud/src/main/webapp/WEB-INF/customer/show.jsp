@@ -10,7 +10,7 @@
 <body>
 	<c:choose>
 		<c:when test="${! empty customer}">
-			<h1>Customer Created</h1>
+			<h1>Customer Results</h1>
 			<table>
 				<tr>
 					<td>Customer ID:</td>

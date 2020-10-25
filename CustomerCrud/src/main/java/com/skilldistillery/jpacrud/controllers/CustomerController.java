@@ -21,6 +21,18 @@ public class CustomerController {
 	public String index() {
 		return "index";
 	}
+	@RequestMapping(path= "deleteCustomerHomepage.do")
+	public String dch() {
+		return "deleteCustomer";
+	}
+	@RequestMapping(path= "createCustomerHomepage.do")
+	public String cch() {
+		return "createCustomer";
+	}
+	@RequestMapping(path= "updateEmailByPhoneHomePage.do")
+	public String UpdateEmailHomePage() {
+		return "updateEmailByPhone";
+	}
 	
 	
 	@RequestMapping(path = "getCustomer.do", params = "cid")
@@ -50,7 +62,7 @@ public class CustomerController {
 	public ModelAndView deleteCustomer(Integer id) {
 		dao.deleteCustomer(id);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
+		mv.setViewName("customer/deleted");
 		return mv;
 	}
 	@RequestMapping(path="updateEmail.do", method = RequestMethod.POST)
