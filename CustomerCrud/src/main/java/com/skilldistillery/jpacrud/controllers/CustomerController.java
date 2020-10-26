@@ -67,9 +67,9 @@ public class CustomerController {
 	}
 	@RequestMapping(path="updateEmail.do", method = RequestMethod.POST)
 	public ModelAndView updateEmail(String email, String phone) {
-		dao.updateEmailByPhone(email, phone);;
+		dao.updateEmailByPhone(email, phone);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("customer/show");
+		mv.setViewName("customer/updated");
 		return mv;
 	}
 }

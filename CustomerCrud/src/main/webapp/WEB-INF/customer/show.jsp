@@ -44,6 +44,7 @@
 		</c:when>
 		<c:otherwise>
     No Customer found
+    <br>
     
     	<p>
 				<a href="/" class="btn btn-secondary" role="button">Back
