@@ -12,7 +12,7 @@
 			<h1>Customer Deleted</h1>
 		
 			<p>
-				<a href="/" class="btn btn-secondary" role="button">Back
+				<a href="home.do" class="btn btn-secondary" role="button">Back
 					to Home</a>
 			</p>
 </body>

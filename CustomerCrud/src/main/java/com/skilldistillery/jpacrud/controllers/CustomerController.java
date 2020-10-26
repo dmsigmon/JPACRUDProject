@@ -17,7 +17,7 @@ public class CustomerController {
 	CustomerDAOJpaImpl dao;
 	
 	
-	@RequestMapping(path= "/")
+	@RequestMapping(path= {"/", "home.do"})
 	public String index() {
 		return "index";
 	}

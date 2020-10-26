@@ -11,7 +11,7 @@
 	
 			<h1>Customer Email  Updated</h1>
 			<p>
-				<a href="/" class="btn btn-secondary" role="button">Back to Home</a>
+				<a href="home.do" class="btn btn-secondary" role="button">Back to Home</a>
 			</p>
 
 

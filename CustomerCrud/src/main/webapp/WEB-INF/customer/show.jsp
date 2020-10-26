@@ -38,7 +38,7 @@
 				</tr>
 			</table>
 			<p>
-				<a href="/" class="btn btn-secondary" role="button">Back
+				<a href="home.do" class="btn btn-secondary" role="button">Back
 					to Home</a>
 			</p>
 		</c:when>
@@ -47,7 +47,7 @@
     <br>
     
     	<p>
-				<a href="/" class="btn btn-secondary" role="button">Back
+				<a href="home.do" class="btn btn-secondary" role="button">Back
 					to Home</a>
 			</p>
 		</c:otherwise>
