@@ -10,7 +10,7 @@
 * Deploying an application to AWS
 
 ##Requirements
-* Your project utilizes a MySQL database to manipulate data. For this project you are only required to have a single table and entity.
+* Project utilizes a MySQL database to manipulate data. For this project you are only required to have a single table and entity.
 
 *The MySQL table is mapped to a valid JPA Entity and tested to ensure the mappings are working correctly.
 
